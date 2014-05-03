@@ -11,7 +11,7 @@
 
 ## Example
 
-```
+```js
 var lens = require('dot-lens');
 var last = lens("name.last")
 

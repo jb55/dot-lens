@@ -3,6 +3,8 @@
 
   Extremely fast dot lenses. Generated lenses are compiled javascript functions.
 
+  [![Build Status](https://travis-ci.org/jb55/dot-lens.svg)](https://travis-ci.org/jb55/dot-lens)
+
 ## Installation
 
   Install with npm

@@ -15,21 +15,21 @@
 
 ```js
 var lens = require('dot-lens');
-var last = lens("name.last")
 
 var person = {
   name: {
     first: "bill",
     last: "casarin"
-  }
+  },
+  tags: ["unfunny", "poor"]
 }
 
-last.get(person)
-// "casarin"
+var last = lens("name.last")
+last.get(person) // "casarin"
+last.set(person, "hi") // person.name.last === "hi"
 
-last.set(person, "hi")
-log(person.name.last);
-// "hi"
+var firstTag = lens("tags.0")
+firstTag.set(person, "funny") // person.tags[0] === "funny"
 ```
 
 ## Benchmarks

@@ -31,7 +31,6 @@ exports.getter = function getter(props) {
   fn += props.reduce(function(res, prop){
     return res + lookup(prop)
   }, "")
-  console.log(fn);
   return fn;
 }
 

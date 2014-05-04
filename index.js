@@ -9,11 +9,11 @@ function lens(path) {
 }
 
 exports.get = function get(path) {
-  return exports.getProps(path.split("."))
+  return exports.getProps(split(path))
 }
 
 exports.set = function set(path) {
-  return exports.setProps(path.split("."))
+  return exports.setProps(split(path))
 }
 
 exports.getProps = function getProps(props) {
@@ -31,7 +31,16 @@ exports.getter = function getter(props) {
   fn += props.reduce(function(res, prop){
     return res + lookup(prop)
   }, "")
+  console.log(fn);
   return fn;
+}
+
+var escape = "@@LENS_ESCAPED_DOT@@";
+function split(path) {
+  path = path.replace("\\.", escape)
+  return path.split(".").map(function(prop){
+    return prop.replace(escape, ".");
+  });
 }
 
 function lookup(name) {

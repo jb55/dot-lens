@@ -50,11 +50,14 @@ exports.props.touch = function touchProps(props) {
     var root;
     props.forEach(function(prop, i){
       var next = props[i+1];
+
+      if (obj[prop] == null)
       if (next != null)
       if (/\d+/.test(next))
         obj[prop] = []
       else
         obj[prop] = {}
+
       obj = obj[prop]
     });
   }

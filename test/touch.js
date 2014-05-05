@@ -17,6 +17,20 @@ describe('touch', function(){
     expect(obj).to.eql({});
   });
 
+  it('multiple nested fields', function(){
+    var touchA = lens('a.a.c');
+    var touchB = lens('a.b.c');
+    var obj = {};
+    touchA(obj);
+    touchB(obj);
+    expect(obj).to.eql({
+      a: {
+        a: {},
+        b: {},
+      },
+    });
+  });
+
   it('nested fields', function(){
     var touch = lens('a.b.c');
     var obj = {};

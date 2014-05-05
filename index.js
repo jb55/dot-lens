@@ -53,7 +53,7 @@ exports.props.touch = function touchProps(props) {
 
       if (obj[prop] == null)
       if (next != null)
-      if (/\d+/.test(next))
+      if (/^\d+$/.test(next))
         obj[prop] = []
       else
         obj[prop] = {}

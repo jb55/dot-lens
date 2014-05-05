@@ -4,7 +4,8 @@ var exports = module.exports = lens;
 function lens(path) {
   return {
     get: exports.get(path),
-    set: exports.set(path)
+    set: exports.set(path),
+    touch: exports.touch(path)
   }
 }
 

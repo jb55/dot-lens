@@ -1,0 +1,11 @@
+{
+  "name": "dot-lens",
+  "repo": "jb55/dot-lens",
+  "description": "Fast, compiled dot lenses for javascript",
+  "version": "1.2.3",
+  "keywords": ["dot", "lens"],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [ "index.js" ]
+}
